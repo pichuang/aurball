@@ -1,0 +1,27 @@
+# Maintainer: Roan huang <pichuang@cs.nctu.edu.tw>
+
+_pkgname=eventlet
+pkgname=python2-$_pkgname
+pkgver=0.15.2
+pkgrel=1
+pkgdesc="Concurrent networking library for Python2"
+arch=('i686' 'x86_64')
+url="https://pypi.python.org/pypi/eventlet"
+license=('MIT')
+depends=('python2' 'python2-setuptools')
+provides=("$_pkgname")
+conflicts=("$_pkgname")
+source=("https://pypi.python.org/packages/source/e/eventlet/$_pkgname-$pkgver.tar.gz")
+md5sums=('c5b0217cc1da6fcf4bcf6957df57f3cd')
+
+build() {
+  cd $srcdir/$_pkgname-$pkgver
+  msg 'Building...'
+  python2 setup.py build
+}
+
+package() {
+  cd $srcdir/$_pkgname-$pkgver
+  python2 setup.py install --root="$pkgdir/" --optimize=1
+}
+
