@@ -1,0 +1,3 @@
+[submodule "archlinux-openvswitch"]
+	path = archlinux-openvswitch
+	url = https://github.com/pichuang/archlinux-openvswitch
