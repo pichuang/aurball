@@ -8,7 +8,7 @@ pkgdesc="Ryu component-based software defined networking framework"
 arch=('i686' 'x86_64' 'armv6h')
 url="http://osrg.github.io/ryu/"
 license=('Apache License 2.0')
-depends=('python' 'python-setuptools' 'python-pip' 'python-lxml' 'python-greenlet' 'python-webob' 'python-six' 'python-routes' 'python-paramiko' 'python-oslo-config' 'python-msgpack' 'python-netaddr' 'python-eventlet' 'python-pbr' 'python-stevedore')
+depends=('python' 'python-setuptools' 'python-pip' 'python-lxml' 'python-greenlet' 'python-webob>=1.2' 'python-six>=1.4.0' 'python-routes' 'python-paramiko' 'python-oslo-config' 'python-msgpack>=0.3.0' 'python-netaddr' 'python-eventlet>0.18.3' 'python-eventlet<0.21.0' 'python-pbr' 'python-stevedore' 'python-tinyrpc' 'python-ovs>=2.6.0')
 makedepends=('git' 'sed')
 provides=("$_pkgname")
 conflicts=("$_pkgname")
